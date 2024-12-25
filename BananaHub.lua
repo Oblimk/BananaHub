@@ -5,3 +5,6 @@ end
 elseif game.PlaceId == 16732694052 then 
     loadstring(game:HttpGet("https://raw.githubusercontent.com/Oblimk/BananaHub/refs/heads/main/Fisch.lua"))()
 end
+elseif UniverseID == 5844593548  then 
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Oblimk/BananaHub/refs/heads/main/AV-Banana%2Clua"))()
+end
