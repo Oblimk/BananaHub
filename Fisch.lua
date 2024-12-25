@@ -1,18 +1,3 @@
-repeat wait() until game:IsLoaded()
-pcall(function()
-    repeat
-        wait()
-        for r, v in pairs(getconnections(game:GetService("Players").LocalPlayer.PlayerGui.LoadingGui.PlayBackground.Play.Activated)) do
-            v.Function()
-        end
-    until not game:GetService("Players").LocalPlayer.PlayerGui.LoadingGui.Enabled
-end)
-if game.CoreGui:FindFirstChild("Banana Hub Btn") then
-    pcall(function()
-        game.CoreGui["Banana Hub Btn"]:Destroy()
-        game.CoreGui.ScreenGui:Destroy()
-    end)
-end
 local Window = Fluent:CreateWindow({
     Title = "Banana Hub",
     SubTitle = "by Obli",
