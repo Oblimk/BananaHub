@@ -22,21 +22,6 @@ spawn(function()
     HideGui.Enabled = true
     HideGui.Parent = game:GetService('CoreGui')
 
-    local UICornerBtnHide = Instance.new("UICorner")
-    UICornerBtnHide.Parent = btnHideFrame
-    UICornerBtnHide.CornerRadius = UDim.new(1, 0)
-
-    btnHide.MouseButton1Click:Connect(function()
-        getgenv().UIToggled = not getgenv().UIToggled
-        local sizeXY = getgenv().UIToggled and 40 or 30
-        game:GetService('TweenService'):Create(imgHide, TweenInfo.new(.25), { Size = UDim2.new(0, sizeXY, 0, sizeXY) })
-            :Play()
-        game:GetService('TweenService'):Create(btnHideFrame, TweenInfo.new(.25),
-            { BackgroundTransparency = getgenv().UIToggled and 0 or .25 }):Play()
-        game:service("VirtualInputManager"):SendKeyEvent(true, "P", false, game)
-        game:service("VirtualInputManager"):SendKeyEvent(false, "P", false, game)
-    end)
-end)
 local Window = Fluent:CreateWindow({
     Title = "Banana Hub",
     SubTitle = "by Obli",
