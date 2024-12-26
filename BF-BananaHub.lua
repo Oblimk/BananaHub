@@ -1,10 +1,3 @@
-repeat wait() until game:IsLoaded()
-pcall(function()
-    repeat
-        wait()
-            v.Function()
-        end
-end)
 local Fluent = loadstring(game:HttpGet("https://github.com/dawid-scripts/Fluent/releases/latest/download/main.lua"))()
 
 local Window = Fluent:CreateWindow({
