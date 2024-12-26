@@ -8,12 +8,6 @@ pcall(function()
     until not game:GetService("Players").LocalPlayer.PlayerGui.LoadingGui.Enabled
 end)
 local Fluent = loadstring(game:HttpGet("https://github.com/dawid-scripts/Fluent/releases/latest/download/main.lua"))()
-if game.CoreGui:FindFirstChild("Banana Hub Btn") then
-    pcall(function()
-        game.CoreGui["Banana Hub Btn"]:Destroy()
-        game.CoreGui.ScreenGui:Destroy()
-    end)
-end
 
 local Window = Fluent:CreateWindow({
     Title = "Banana Hub",
