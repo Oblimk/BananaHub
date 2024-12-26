@@ -4,7 +4,6 @@ pcall(function()
         wait()
             v.Function()
         end
-    until not game:GetService("Players").LocalPlayer.PlayerGui.LoadingGui.Enabled
 end)
 local Fluent = loadstring(game:HttpGet("https://github.com/dawid-scripts/Fluent/releases/latest/download/main.lua"))()
 
