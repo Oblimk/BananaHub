@@ -13,10 +13,12 @@ elseif game.PlaceId == 4520749081 or  game.PlaceId == 6381829480 or game.PlaceId
     local start = tick()
     repeat task.wait() until game.Players.LocalPlayer and game.Players.LocalPlayer:FindFirstChild("DataLoaded") and game.Players.LocalPlayer:FindFirstChild("DataLoaded").Value
     loadstring(game:HttpGet("https://raw.githubusercontent.com/Oblimk/BananaHub/refs/heads/main/KL-Banana.lua"))()
-    elseif game.PlaceId == 18901165922 or game.PlaceId == 19006211286 then 
+elseif game.PlaceId == 18901165922 or game.PlaceId == 19006211286 then 
     loadstring(game:HttpGet("https://raw.githubusercontent.com/Oblimk/BananaHub/refs/heads/main/PetsGo.lua"))()
 elseif game.PlaceId == 16732694052 then 
     loadstring(game:HttpGet("https://raw.githubusercontent.com/Oblimk/BananaHub/refs/heads/main/Fisch.lua"))()
 elseif UniverseID == 5844593548  then 
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/Oblimk/BananaHub/refs/heads/main/AV-Banana%2Clua"))()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Oblimk/BananaHub/refs/heads/main/AnimeRebron.lua"))()
+else
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Oblimk/BananaHub/refs/heads/main/AV-Banana%2Clua")()
 end
