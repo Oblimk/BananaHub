@@ -1,105 +1,19 @@
-local start = tick()
-repeat task.wait() 
-    repeat task.wait() pcall(function() game.ReplicatedStorage.Chest.Remotes.Functions.EtcFunction:InvokeServer("EnterTheGame", {}) end) until not game:GetService("Lighting"):FindFirstChild("TeamBlur") 
-until game.Players.LocalPlayer
-if not _G.Config then
-    local k = {
-        Enabled = false, --> true: enable or false: disable the script
-        Events = {
-            SwordChanged = nil,
-            FightingStyleChanged = nil,
-            EnemiesAdded = nil,
-            EnemiesRemoved = nil,
-            FlingPrevent = nil,
-            WindowFocusReleased = nil,
-            WindowFocused = nil,
-            RaceChanged = nil,
-            TimeElapsed = nil,
-            LogService = nil,
-        }, --> Necessary for script, do not adjust!
+repeat wait() until game:IsLoaded()
+pcall(function()
+    repeat
+        wait()
+            v.Function()
+end)
+local Fluent = loadstring(game:HttpGet("https://github.com/dawid-scripts/Fluent/releases/latest/download/main.lua"))()
 
-        Loops = {
-            BringMob = false,
-            Attack = false,
-            UseSkills = false,
-            M1s = false,
-            AttackLoop = false,
-        },  --> Necessary for script, do not adjust!
-
-        Allowed_Actions = {
-            FarmingLevel = false, --> Auto farming level
-            CollectChests = true, --> Collect all chests!
-            TierFruits = {"Uncommon", "Common", "Rare", "Epic", "Legendary"},
-            StoreFruits = true, --> Auto store devil fruit!
-            BossesAim = { "Expert Swordman [Lv. 3000]", "King Samurai [Lv. 3500]", "Dragon [Lv. 5000]",
-            "Ms. Mother [Lv. 7500]", "Ghost Ship", "SeaKing", "HydraSeaKing", "AbyssalSeaKing", "Deepsea Crusher", "SkullSeaking" }, --> Focus on these bosses!
-            SpecificItemsToGet = {"DarkLeg", "Cyborg", "Buso", "Ken", "WaterStyle", "DragonClaw", "Electro"}, --> Get specific items!
-
-            M1 = true, --> Auto M1 attack!
-            Skills = {
-                Enabled = true,
-                List = {FS = true, SW = true, DF = true},
-                DFList = { Z = true, X = true, C = true, V = true }
-            },
-
-            Stats = {
-                Melee = { Name = "Melee", Enabled = true }, --> Enable to upgrade!
-                Sword = { Name = "sword", Enabled = true },
-                Defense = { Name = "Defense", Enabled = true },
-                Fruit = { Name = "DF", Enabled = false }
-            }, --> Upgrade order: Melee --> Sword --> Defense --> Fruit
-
-            FindSeaMonster = true, --> Auto find sea monsters!
-
-            Sea2Unlock = false, --> Auto unlock Sea 2!
-            Sea3Unlock = false, --> Auto unlock Sea 3!
-
-            Aimlock = false,
-            MouseLock = false,
-
-            Protect = false,
-
-            Webhook = {
-                Enabled = false,
-                Level = 10,
-                Logs = {PlayerStatus = true, Bosses = true, Console = true},
-                URL = ""--"https://discord.com/api/webhooks/id/token",
-            },
-        },
-
-        OnlyFarm = { ["Dragon [Lv. 5000]"] = { Enabled = false, At = 5000, Keep = 100 } }, --> Focus on Dragon [Lv. 5000]!, Keep 100 orbs then spawn
-
-        Farm = CFrame.Angles(math.pi / -2, 0, 0) * CFrame.new(0, 0, 7), --> Efficient farming!
-
-        -- Optimize farming
-        Options_Disable = {
-            Textures = true,
-            VisualEffects = true,
-            Parts = true,
-            Particles = true,
-            Sky = true,
-            FullBright = false
-        },
-
-        Performance = {
-            SetFPS = 20, --> Useful for low cpu usage, while using in long time!
-            WhiteScreen = false, --> Not recommended to use
-        }
-    }
-    _G.Config = k
-end
-
-if not _G.FX_Options then
-    _G.FX_Options = {
-        Enabled = false,
-        Textures = true,
-        VisualEffects = true,
-        Invisible = false, --> For parts
-        Parts = false,
-        Particles = true,
-        Sky = false,
-        FullBright = true
-    }
-end
-
-loadstring(game:HttpGet("https://raw.githubusercontent.com/RedGamer12/TNNP-SYSTEM/refs/heads/main/client/King%20Legacy/main-obfuscated.lua"))()
+local Window = Fluent:CreateWindow({
+    Title = "Banana Hub",
+    SubTitle = "by Obli",
+    TabWidth = 125,
+    Size = UDim2.fromOffset(500, 350),
+    Acrylic = false,             -- The blur may be detectable, setting this to false disables blur entirely
+    Theme = "Dark",
+    MinimizeKey = Enum.KeyCode.P -- Used when theres no MinimizeKeybind
+})
+    
+return(function(H,R,v,N,M,d,f,x,Q,Y,h,z,s,A,m,P,y,L,D,E,O,I,j,l,t,U,J,w)Q=({});local k=107;while true do if k==107.0 then if not not Q[0x3939]then k=(Q[14649]);else k=(-1883361584+-(w[2]-w[0x7]+w[0X9]-w[0X1]-w[2]));(Q)[0X3939]=k;end;elseif k==78.0 then if not not Q[4420]then k=Q[0X001144];else Q[27603]=(2752840883+-(y.H((Q[14649]>w[0X008]and w[1]or w[8])<=w[4]and w[2]or w[8],w[0x3],w[0x2])+k));k=3551690810+-y.R((y.A((y.T((y.k(w[3])),w[6])),w[8],w[9])),0XE);Q[4420]=(k);end;else if k~=85.0 then else break;end;end;end;local p;k=59;repeat if not(k>59.0)then if k==37.0 then if not Q[0X76b8]then k=(3545355511+-y.T((y.w((y.K(w[3]+Q[27603],Q[0X6Bd3])))),Q[0X6Bd3]));(Q)[30392]=k;else k=Q[30392];end;else if not Q[32534]then k=(3191644651+-y.r((y.A(y.r(w[8],Q[0X6bD3])-w[8],w[9],Q[0X3939])),Q[27603]));(Q)[0X7f16]=(k);else k=(Q[0X7F16]);end;end;else if not(k<94.0)then if not not Q[11133]then k=Q[11133];else k=(3666939853+-y.w((y.w((y.K(w[7]-k,Q[0x6BD3]))))));Q[11133]=(k);end;else p=4503599627370496;break;end;end;until false;local C;k=(61);while true do if not(k>106.0)then if not(k>61.0)then C=({});if not Q[0X4Ab7]then Q[0x28aa]=(3001973652+-(y.H((y.T(w[0X1]-w[0X002],w[0X8],Q[0X6BD3])))-w[9]));k=(0X79+-y.w((y.w((y.k(Q[0x3939]-w[0x4]))))));(Q)[0X4ab7]=k;else k=Q[19127];end;else break;end;else if k==120.0 then if not not Q[16385]then k=(Q[0X4001]);else k=(0X4819FAA8+-(y.A(Q[27603]+w[7]-w[9])>Q[27603]and w[6]or w[4]));Q[16385]=(k);end;else if not Q[0X196C]then Q[17883]=3164498539+-(w[0X8]+w[1]+Q[0X4AB7]-k+Q[11133]);k=(141+-(y.A((y.k(w[0x4]-w[0X4])))+Q[0X006BD3]));(Q)[0X196c]=k;else k=Q[0X196C];end;end;end;end;local a,_,q,n,e,g;k=(0x10);while true do if not(k>47.0)then if not(k>16.0)then if not not Q[0x417E]then k=(Q[0X0417e]);else k=(1877994534+-y.w((y.H((y.K(Q[27603]-w[3],Q[0x6bd3])),w[0X008]))));Q[16766]=k;end;elseif not(k<47.0)then a=(nil);if not not Q[31429]then k=(Q[31429]);else Q[0X2d60]=2212706919+-y.T(w[0X2]-w[0X3]-Q[0X4ab7]-w[8],Q[0x7F16]);k=0x33B4+-y.A((y.k((y.r(Q[0X2b7d]+Q[0x45dB],Q[0x45dB])))),Q[0x196c],w[1]);Q[31429]=k;end;else g=(O.wrap);break;end;else if k>66.0 then if k>=83.0 then e=(function(H,R,v)local N=3;while true do if N>3.0 then if R-v+1.0>7997.0 then return q(R,v,H);else return d(H,v,R);end;break;else v=(v or 1.0);R=(R or#H);N=6;end;end;end);if not not Q[14600]then k=(Q[14600]);else k=18900923+-(y.M(y.z(Q[0X196C])+w[6],Q[0x2694])-Q[0X1fC9]);(Q)[0x003908]=(k);end;else n=m.char;if not not Q[0X50E6]then k=Q[0X50e6];else Q[0X330d]=62+-y.z(y.k((y.K(Q[0X045Db],Q[0X1D92])))+Q[0X4aB7]);k=4294967339+-(y.A(Q[24803]-Q[32534],Q[31429])+Q[0x2B7D]-Q[0X1Fc9]);Q[0X50E6]=k;end;end;elseif not(k>=66.0)then q=(function(H,R,v)local N;for M=0X67,0XD6,0x6 do if M>103.0 and M<115.0 then N=H-R+1.0;elseif not(M>109.0)then if M<109.0 then if R>H then return;end;end;else if N>=8.0 then return v[R],v[R+1.0],v[R+2.0],v[R+3.0],v[R+4.0],v[R+l],v[R+6.0],v[R+7.0],q(H,R+L,v);elseif N>=7.0 then return v[R],v[R+1.0],v[R+2.0],v[R+3.0],v[R+4.0],v[R+5.0],v[R+6.0],q(H,R+7.0,v);elseif N>=6.0 then return v[R],v[R+1.0],v[R+2.0],v[R+3.0],v[R+4.0],v[R+5.0],q(H,R+6.0,v);elseif N>=5.0 then return v[R],v[R+1.0],v[R+2.0],v[R+A],v[R+4.0],q(H,R+5.0,v);elseif N>=4.0 then return v[R],v[R+1.0],v[R+2.0],v[R+3.0],q(H,R+4.0,v);elseif N>=3.0 then return v[R],v[R+1.0],v[R+2.0],q(H,R+3.0,v);elseif not(N>=2.0)then return v[R],q(H,R+1.0,v);else return v[R],v[R+1.0],q(H,R+2.0,v);end;break;end;end;end);if not not Q[0X1FC9]then k=(Q[8137]);else(Q)[9876]=(26+-y.H((y.w(y.A(w[7],Q[0X4001])-Q[319])),Q[32534]));(Q)[24803]=(2225986901+-(y.w(y.A(Q[0X45db],Q[10410],Q[0X0045dB])==w[0X7]and Q[4420]or Q[0X196C])-w[7]));k=0X124+-(Q[11616]+Q[0X2B7d]+Q[0X4ab7]+k-Q[32534]);(Q)[0x1fc9]=(k);end;else _={};if not not Q[319]then k=Q[319];else(Q)[0X1d92]=0X18+-(y.z((y.w((y.T(Q[0X7F16],Q[0x4001],w[0X3])))))>=Q[0X28Aa]and Q[0X196c]or Q[27603]);k=0x20+-(y.z(Q[0X4001])+Q[30392]-Q[0X0028aa]-Q[0X45db]);Q[0X13f]=(k);end;end;end;end;local d;k=(48);repeat if not(k>48.0)then if not not Q[0X8C7]then k=Q[2247];else k=(3+-((Q[0X2694]>Q[0X3939]and Q[0x4aB7]or Q[0x2D60])-Q[319]-Q[4420]-Q[0X330D]));(Q)[0x8C7]=k;end;else if k<=79.0 then d=1.0;if not not Q[12154]then k=(Q[12154]);else k=4094509401+-(y.T(Q[0X7F16]+Q[16766]~=Q[13069]and Q[6508]or Q[0X7F16],Q[2247])+w[0x4]);(Q)[12154]=(k);end;else break;end;end;until false;local A,L,l;k=(0x56);repeat if k<86.0 then break;else if k>61.0 then A=({});L=1.0;l=y.W;if not not Q[30865]then k=Q[30865];else k=0X4d+-((y.T((y.T(w[6],Q[16766],Q[0X013f])))<Q[0X2694]and w[0x6]or Q[0x7F16])-Q[0X3939]);(Q)[0x7891]=(k);end;end;end;until false;local q=O.yield;O=({});local Z;k=24;while true do if k==24.0 then for H=t,255.0 do(O)[H]=n(H);end;if not not Q[0X58bc]then k=Q[22716];else k=0x6C+-(y.H(y.z(Q[16385])+Q[0X3939],Q[0X330D],w[7])+Q[0X50e6]);Q[22716]=(k);end;else if k~=23.0 then else Z=(function(H)H=R(H,"\122",'!!\33!\33');return R(H,'...\46.',l({},{__index=function(H,R)local v,N,M,d,f=D(R,1.0,5.0);local x=(f-33.0+(d-33.0)*85.0+(M-33.0)*7225.0+(N-33.0)*614125.0+(v-33.0)*5.2200625E7);f=z(">\0734",x);H[R]=(f);return f;end}));end)(f("LPH%U50!R1(7f,FCT6,F*(i.FE?[Hz!)Pp9\"Cc7eF>=)2Dfor>CjIiFEas$*F)Pl+G@>N01'CrkAT9I4F(KH9E->Z+F_*<9Eas$*F)Pl+ATDfJ#64`(z1'MW,@;Ka8$Zfm$@rH7+FCB'/1'M#lE,TqU$>3plF`;M4Cis;E%V0-[F_>&oATVa,@ps1/$$UE(FCf&uCh5@+F`)/,@r(</z!,4\\R\"$C9W1''*b$ZL-#DKL#8G@>N01'V?/Ec#6,?N;nbz!!!#`z!!#5K1'_/nBl7HmGVTJ1?XmM\\D!:p\"z#XC-R@rH7+Des!(EbTE51'hK7DI[d&Df4e>z!!!#`z!;MU?1'M-$F>G[-\"`nKt@:h7q,;KC2G].Wez!;rHS1g2)$'*/(5!&=[iF*1sVz!!#8Lkl:\\`!'mL55V`IaH#R=M\"CGMPAMb8\\z!!)6`!!!#W%H]o2\"^bVXF^d03U#QFZ!!!!S$tj-nD.RftFCAWpAMOI(DKBB0FQic*zE'Z5`DKTf*ATBO5E,oZ1FC\\rlF_<P2Oc^sj!!!!UFT;CAz1'VB.@<?!m1jT-%z!&=t%EbTE5@rH7+Des\"Lz!!)LQkl:\\`!!!!V5V`^.-m`CS.9ehB$=,CqF(KH1ATV@&@:F%akl:\\`!!(qq5Vu%4z!!)6`z!!#8>!&=RU1'(Q8\"TSN&z1'V0.F(KB614EAEF`JTuF^ZD(DK]`7Df0E'DKI\"3De3u4DJsV>F*2G@DfTqBFD,5.A7]4mB-;#)@WGmtGq:([BOu3qAoD^$+F.mJ+CT;%+E_R1@VfTuFDi:EF(HIfF`Lo0BI@jD-WP5!+@KdMF_;gjBju*kEd9#TF(KH8Bl7Q91'CrQ:0'+QBl7O$1'M#l@:Wn(\"DqRhBJK^\"H$!UQ$ug6$DKL#8ATDg0E\\[YD1'r&C@:NkX@:O(.#]jR!F*(i#CGH91ATW'6G%#30ATKU:A7]4mB4#^kFDPl*@;I\\&A7]4mB/0[3@<Zd(F>=5:ATVF#DKBo.DKI]<z!!!!S\"CbeWAEa'ozn3A`2Eb02F#'4?lARfg;$=@.^Df^#@Bl7Q=\"D2@cA249p?YjiKz!!\"i@kl:\\`!!!!Q6g4RNz+@%[c?XIYgA241%1'hu?DKTf*ATBO1G]7/$Ci&>9!!!!A^u[g:%WHH&DKL#8@rH7+DeruA\"onW'z1(825Df0W7Ch7<uAoBF,@<-!9$Y+*mF)Pl+G@>N0kl:\\`!!!\"<5j87Kzn3Jl3z!!!!U#QOi)z1';E.C]H3nDIn'71'V6,DI[*s1'_W9DffE0AMOC-@:O*;zi$@bV1^O-^z!&=XcDfRW*'ac'++<VdL+<W6f>?_FA+<VdL+<VdL+<VdL+<VdL+<VdL+<VdL+>,o*-nd&$/hSb//hSb!+<VdL+>,9!/1`8(-mL#b5X6q/+<VdL+<VdL+<VdL+<VdL+<VdL+=J]^+<W3g-mL#a-71uC5X6YB-n$`%0/\"_%-mKr_,9nE]-nd&\"/1`Cr+<VdL/2&Y)-8#WJ+<VdL+<VdL+<VdL+<VdL+<W<e+>+s*5X7S\"5X7R\\/0H&f-mh2E5UIg)-71')5X7S\"5UI^(.P*2)/hSb//hSV\"5X7R_/g)8f,;'<G+<VdL+<VdL+<VdL+<VdL.PDns-9sg]5X7S\".Nfi^,qL/]+=\\cd-9sg]5X6YB-n6c#+<VdL+<VdL+<VdL+>,2p-mL#d.R66G.Nfi`/.*LB+<VdL+<VdL+<VdL+<Vm[+>5uF5X7S\".Ng2f-m1&f-8-u&0-_bi-9sg]-7C3+5X7S\"5X7S\"5X7RZ.P*2)/hSb-0.&qL5X7S\"5X6_?/gUiI+<VdL+<VdL+<VdL+<VmO+<s-:5X7Ra00gg+/gDYp0.8A(/2&J(0/\"e+/hAY(.R66a5X7S\"5X7S\"5UAZ\\5X7S\"5X7RZ/gEVH5X7S\"-8$De$6UH6+<VdL+<VdL+<Vd[+<W!r5X7S\"5X7R_,sW[t.OHJl-9sg]5U.p/5X7S\"0-qns/1!PH5X7S\"5UA'K5UIm1+<W3d/1rP-+<W-[5X7RZ+=[^@+<VdL+<VdL+<VdO+<W9`5X7S\"5X7S\"5X7Rc-n$B,5X7S\",;()]+<W3^5X6PZ5UIs'/g`hK5X7R]/1r/45X7Rf-9sgB-pU$_-7CMu-mgJf0.[GQ+<VdL+<VdL-nc\\c+=KK%-71#c5X7R]0.\\4s5U.[B5X7Rc+<VdL+<VdL,=\"LI/1*V/+>5uF5X7Rc,pO^$5X7S\"-m0WT+<W.!5X7S\"-7gGh/g)bR+<VdL+<VdL0-DA^0.\\>55X6Y@-nd4u5X7Rf+=09<5UJ`]5U\\6-+<VdX-9sgE/h/M(+<Vsq5Umm!+=09<5X7S\",p4<Q+<VdL-pU$E-n6i%/gVhs$6UH6+<VdL+<W<j00hcL/0H&`-9sg@/0H&X00h05/1Mu35X7RZ-9sgB,:+`d,sWe,+>5uF5X7S\"-8$Dc5X7RZ-9sg]-7's'5X7S\"5UJ$8-n7J8,75P9+<VdL+<VsV/g`h.+>,!+5X6P:00hcf5U@aB5X6YL/g)8Z/2&D\"0.JLq+>,;o5X7S\"5X7S\"5X6kM-7CK\",sX^?.OIDG5U[j*/hSb//1)Sk5VEHe+<VdL+<Vdl,q^Mk+>,!+5X6YG+<VdL0.&qL5X7S\"5X7S\"5X7S\"5X6Y]5U.p1,sX^\\5X7S\"5X7R]/0H&`5X7S\"5X7S\"5X7S\"0.]@R5X7RZ/g`%T+<VdL+<VdL-718i,p4fe.NfiV+>5uF5U\\6-+=np+5X7S\"-8-c#0/\"t'-m1/i5X7S\"5X7S\"5X7S\"5X7R_+<W3^5X7S\"5X7S\"-7g8f5X6YG00gp=$6UH6+<VdL+>+ri,=!Y\"00hcf5U[a)5X7S\"5X6tF+<VdL.O@>F5X7S\"5UJ*75UIU),:jri-9sg]5X7RZ+>+lg,pk8r,=\"LZ5Umm!+=]WA-8-hq.LI:@+<VdL+<VdZ-8-tr5X7S\"5X7Rc+<VdV-9sgB/hA>75UIm1+<VdL/1;f0,pklB5X7S\"5X7R_/h/Cp+>5uF5X7S\"5X7R]/0H&X+<VdQ5X7S\"/hRJR+<VdL+<Vdl.Ng>i5X7S\"5X7S\"-m0WT+<VdL/g)8Z-pU$_5X7S\"5U[`t+<VdL+>,,l,pklB5X7S\"5X7S\"5X6YE/0H&f0.n_>,p4<Q00hcK+>,;S+<VdL+<VdL+<Wp!+>,!+5X7S\"5UJ*++<VdL+<VdL+<VdL/h\\P:5X6eO-9sg]5X7S\"-7g8j.Olu%+<VdL/hAJ#-7CJm5X6P:,sWq&+=ocC,p4``$6UH6+<VdL+<VdL+=8W^00hcf5X7Ra+<VdL+<VdL+<VdL+<VdL+<VdL/gEVH5X7S\"5X6eO,sX^\\5X6_K5X7S\"5X6Y=/0u\\s+<VdL+<W9`5U@O(,75P9+<VdL+<VdL+<VdL0-D`05X7S\",9S*O+<VdL+<VdL+<VdL+<VdL+<VdL+<VdL+<VdL+<VdL+<VdL+<VdL+<VdL+<VdL+<VdL+<VdL,sWe0/0bKE+<VdL+<VdL+<VdL+=JW\\/g`hK5X6eA+<VdL+<VdL+<VdL+<VdL+<VdL+<VdL+<VdL+<VdL+<VdL+<VdL+<VdL+<VdL+<VdL+<VdL+<s,u/hA4S+<VdL+<VdL+<VdL+<VdZ-8$Dl-9sg]/0H&X+<VdL+<VdL+<VdL+<VdL+<VdL+<VdL+<VdL+<VdL+<VdL+<VdL+<VdL+<VdL+<VdL+<W't-8$ho$6UH6+<VdL+<VdL+<VdL+<VdO/g)bm5X6eA00hcU+<VdL+<VdL+<VdL+<VdL+<VdL+<VdL+<VdL+<VdL+<VdL+<VdL+<VdL+<VdL+<Vd[5UJ*7-jh(>+<VdL+<VdL+<VdL+<VdL+<W9i+<Vmo,q^;d5UJ$5,:jr[+<VdL+<VdL+<VdL+<VdL+<VdL+<VdL+<VdL+<VdL+<VdL+<VdL+<VdL00hcR/h[PS+<VdL+<VdL+<VdL+<VdL+<VdL+=\\c^+<s,t/g)bh-pU$_5X6VK/0H&X+<VdL+<VdL+<VdL+<VdL+<VdL+<VdL+<VdL+<VdL+<VdL+>5uF/1rCZ+<VdL+<VdL+<VdL+<VdL+<VdL+<VdL0/\"Fj,sWe.+=]WA5X7S\"5X6_?-pT(3/g)8Z+<VdL+<VdL+<VdL+<VdL+<VdL+<VdL+<VdL+<Vmo5V+$+$6UH6+<VdL+<VdL+<VdL+<VdL+<VdL+<VdO.Ng>j5X6PH+=KK?5X6YK.R66a5X7S\"5UA$*.PECs+<VdL+<VdL+<VdL+<VdL+=\\ur,q:Mo5X6kC0+&gE+<VdL+<VdL+<VdL+<VdL+<VdL+<VdL+<Wp!+>+s*5X6VH+=o/g/jMZe5X7S\"5X7Rc/gWbJ5X7R\\+>,!+5X6eA,=!S./g`h5/1Mbg5X6YK+=[^@+<VdL+<VdL+<VdL+<VdL+<VdL+<VdL+<VdL+<W<[+=\\^'5X7R\\/0H&X.OZW/5X7R]/g)B(5X7S\".Nfs$5X6V<-pU$I+=o,f+<W=&5X7Ra+=IR>+<VdL+<VdL+<VdL+<VdL+<VdL+<VdL+<VdL+<VdL5U.m(/gEVH5X7S\"-7CDt+<VdL+<VdL+<VdL+<VdL+<VdL+<W9f.OZSi5X7S\"5UJ*9-jh(>+<VdL+<VdL+<VdL+<VdL+<VdL+<VdL+<VdL+<VdL+<VdR-nZVb+>,;n5X7S\"5X7S\"5X7S\"5X7S\"5X7S\"5X7S\"5X7S\"5X7S\"5X6_M+=JWF+<VdL+<VdL+<VdL+<VdL+<VdL+<VdL+<VdL+<VdL+<VdL+<VdL+<W…
