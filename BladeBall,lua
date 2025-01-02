@@ -1,6 +1,5 @@
 repeat wait() until game:IsLoaded()
 pcall(function()
-    repeat
         wait()
             v.Function()
 end)
